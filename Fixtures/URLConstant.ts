@@ -1,0 +1,1 @@
+export const URL = 'https://practicetestautomation.com/practice-test-login/';
