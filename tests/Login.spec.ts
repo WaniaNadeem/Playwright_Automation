@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import LoginPage from '../Pages/Login.ts';
+
 test.describe('Login Page', () =>{
 test('Verify user can login in to the system with valid credentials', async ({ page }) => {
 
@@ -68,7 +70,14 @@ test('Verify user cannot login in the system with invalid Password', async ({ pa
       await expect(errorMessage).toBeVisible();
       await expect(errorMessage).toHaveText('Your password is invalid!'); // error message Visible
       await page.waitForTimeout(1000);
+
+      //========================================================================================//
+
+      //const loginPage = new LoginPage(page);
+      //await loginPage.EnterUsername('student');
 });
+
+
 });
 
 
